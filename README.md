@@ -7,4 +7,4 @@
 
 Se the demo below:
 
-![Result](/img/demo.gif "WatchMe")
+[![Result](/img/demo.gif "WatchMe challenge result")](https://github.com/alessandro-lenzi/reactjs-challenge-02-watchme/)
