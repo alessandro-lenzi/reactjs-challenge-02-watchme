@@ -4,6 +4,8 @@
   img {
     width: 14.31rem;
     height: 21.25rem;
+    border-radius: 5px;
+    border-radius: 5px;
   }
 
   > div {
@@ -12,42 +14,66 @@
     bottom: 0;
     right: 0;
     left: 0;
+    max-width: 14.31rem;
+    max-height: 21.25rem;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     background: rgba(31, 34, 41, 0.5);
+    transition: all 0.3s;
+
+    border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0px black;
+
+    &:hover {
+      background: transparent;
+      box-shadow: 0 0 5px 0px black;
+
+      .movie-info {
+        background-color: rgba(0,0,0,0.8);
+      }
+    }
 
     .movie-info {
-      max-width: 12.31rem;
+      // max-width: 12.31rem;
       width: 100%;
-      
+      padding: 0.5rem;
+
       display: flex;
       flex-direction: column;
-  
+      justify-content: flex-end;
+
+      background-color: rgba(0,0,0,0.5);
+      transition: all 0.3s;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
       > span {
         font-weight: 600;
         font-size: 1rem;
         color: #fbfbfb;
-  
+
         margin-top: auto;
         margin-bottom: 0.5rem;
       }
-  
+
       .meta {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-  
-        margin-bottom: 1rem;
-  
+        justify-content: space-around;
+
+        margin-bottom: 0.5rem;
+
         div {
           display: flex;
           align-items: center;
-  
+
           font-weight: 600;
           color: var(--gray);
-  
+
           svg {
             color: #FAE800;
             margin-right: 0.5rem;
