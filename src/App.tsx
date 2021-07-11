@@ -7,7 +7,7 @@ import './styles/global.scss';
 import { GenreResponseProps } from './@types/custom';
 
 
-export function App() {
+export function App(): JSX.Element {
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
 
   function handleGenreSelected(genre: GenreResponseProps) {

@@ -11,7 +11,7 @@ export type ContentProps = {
   selectedGenre: GenreResponseProps;
 };
 
-export function Content({ selectedGenre }: ContentProps) {
+export function Content({ selectedGenre }: ContentProps): JSX.Element {
   const [movies, setMovies] = useState<MovieProps[]>([]);
 
   useEffect(() => {

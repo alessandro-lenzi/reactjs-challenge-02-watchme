@@ -4,7 +4,7 @@ interface IconProps {
   color: string;
 }
 
-export function Icon(props: IconProps) {
+export function Icon(props: IconProps): JSX.Element {
 
   switch (props.name) {
     case 'action':

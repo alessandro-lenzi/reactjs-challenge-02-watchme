@@ -4,7 +4,7 @@ export interface GenreResponseProps {
   id: number;
   name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
   title: string;
-};
+}
 
 export interface MovieProps {
   imdbID: string;
@@ -15,4 +15,4 @@ export interface MovieProps {
     Value: string;
   }>;
   Runtime: string;
-};
+}

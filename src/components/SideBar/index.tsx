@@ -11,7 +11,7 @@ export type SideBarProps = {
   onGenreSelected: (genre:GenreResponseProps) => void,
 };
 
-export function SideBar({ onGenreSelected }: SideBarProps) {
+export function SideBar({ onGenreSelected }: SideBarProps): JSX.Element{
   const [selectedGenreId, setSelectedGenreId] = useState(0);
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
@@ -23,10 +23,14 @@ export function SideBar({ onGenreSelected }: SideBarProps) {
   }, []);
 
   useEffect(() => {
+    if (!genres || !selectedGenreId || !onGenreSelected)
+      return;
+
     const genre = genres.find(genre => genre.id === selectedGenreId);
     if (genre)
       onGenreSelected(genre);
-  }, [selectedGenreId]);
+
+  }, [genres, selectedGenreId, onGenreSelected]);
 
   function handleGenreClick(genreId: number) {
     setSelectedGenreId(genreId);
@@ -49,7 +53,5 @@ export function SideBar({ onGenreSelected }: SideBarProps) {
       </div>
 
     </nav>
-
   );
-
 }
