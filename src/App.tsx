@@ -24,5 +24,5 @@ export function App(): JSX.Element {
         selectedGenre={selectedGenre}
       />
     </div>
-  )
+  );
 }
